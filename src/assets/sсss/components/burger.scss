@@ -1,0 +1,24 @@
+
+.burger {
+height: rem-calc(32);
+width: rem-calc(32);
+    // .burger__menu
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        padding: rem-calc(11 5);
+    }
+
+    // .burger__line
+
+    &__line {
+        display: block;
+        width: rem-calc(22);
+        height: rem-calc(2);
+        background-color:$main-text ;
+    }
+}

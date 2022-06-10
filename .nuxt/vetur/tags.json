@@ -1,0 +1,38 @@
+{
+  "Clean": {
+    "description": "Auto imported from components/clean.vue"
+  },
+  "Galery": {
+    "description": "Auto imported from components/Galery.vue"
+  },
+  "GalleryCard": {
+    "description": "Auto imported from components/galleryCard.vue"
+  },
+  "Intro": {
+    "description": "Auto imported from components/intro.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "OrderCleaning": {
+    "description": "Auto imported from components/orderCleaning.vue"
+  },
+  "Plus": {
+    "description": "Auto imported from components/plus.vue"
+  },
+  "SwitchButton": {
+    "description": "Auto imported from components/SwitchButton.vue"
+  },
+  "Tab": {
+    "description": "Auto imported from components/tab.vue"
+  },
+  "Tabs": {
+    "description": "Auto imported from components/tabs.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/TheHeader.vue"
+  },
+  "WhereClean": {
+    "description": "Auto imported from components/whereClean.vue"
+  }
+}

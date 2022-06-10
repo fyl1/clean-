@@ -1,0 +1,42 @@
+.order-cleaning {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: rem-calc(195);
+  height: rem-calc(195);
+  border-radius: 50%;
+  background: $secondary;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  z-index: 99;
+
+  &:hover{
+    transform: scale(1);
+    transition: 0.5s;
+  }
+  // .order-cleaning__text
+
+  &__text {
+    width: 100%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: rem-calc(18);
+    line-height: 130%;
+    font-family: $font-family;
+    /* White */
+
+    color: #ffffff;
+
+    transform: rotate(-15deg);
+  }
+}
+.index__order-cleaning{
+  position: fixed;
+  bottom: rem-calc(20);
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 99;
+}

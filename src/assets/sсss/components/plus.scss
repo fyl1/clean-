@@ -1,0 +1,121 @@
+.plus {
+    display: inline-block;
+  // .plus__inner
+
+  &__inner {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  // .plus__box
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem-calc(50);
+    height: rem-calc(50);
+    animation: color-pulse 1s infinite;
+    border-radius: 50%;
+  }
+  // .plus__button
+  &__button {
+    position: relative;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    background-color: $secondary;
+    z-index: 3;
+    border-radius: 50%;
+    opacity: 1;
+    & .span_1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: rem-calc(14);
+      height: rem-calc(2);
+      background-color: #ffffff;
+      transition: 0.5s
+    }
+    & .span_2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: rem-calc(2);
+      height: rem-calc(14);
+      background-color: #ffffff;
+      transition: 0.5s
+    }
+  }
+
+
+// .plus__text
+&__text{
+    position: relative;
+    display: inline-block;
+    padding: rem-calc(10);
+
+    background-color: #ffffff;
+    margin-bottom: rem-calc(5);
+    color: $tex-bec;
+    font-weight: 500;
+    font-size: rem-calc(13);
+    line-height: 130%;
+    font-family: $font-family;
+    &::before{
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+        bottom: rem-calc(-3);
+        width: rem-calc(6);
+        height: rem-calc(6);
+
+    }
+}
+  // .plus__content
+  &__content {
+   position: absolute;
+   top: rem-calc(-50);
+    opacity: 0;
+    z-index: -10;
+    height: 0;
+    width: 0;
+
+  }
+  &.active {
+    .plus__box{
+        animation: none;
+    }
+    .plus__content{
+    opacity: 1;
+    z-index: 0;
+    height: auto;
+    width: auto;
+    }
+    
+    & .span_1 {
+        transform:translate(-50%, -50%) rotate(-45deg);
+        transition: 0.5s
+      }
+      & .span_2 {
+        transform:translate(-50%, -50%) rotate(135deg);
+        transition: 0.5s
+      }
+  }
+}
+@keyframes color-pulse {
+  0% {
+    background-color: rgba($color: $secondary, $alpha: 0.1);
+  }
+  50% {
+    background-color: rgba($color: $secondary, $alpha: 0.3);
+  }
+  100% {
+    background-color: rgba($color: $secondary, $alpha: 0.1);
+  }
+}

@@ -1,0 +1,18 @@
+.btn.main-btn {
+  border-radius: 6px;
+  background-color: $secondary;
+  padding: 14px;
+  width: 179px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
+  line-height: 1.2;
+  &:hover {
+    background-color: lighten($color: $secondary, $amount: 10);
+    transition: 0.4s;
+  }
+  &:focus {
+    background-color: lighten($color: $secondary, $amount: 10);
+    transition: 0.4s;
+  }
+}

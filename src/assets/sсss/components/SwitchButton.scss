@@ -1,0 +1,62 @@
+.switch-button-control {
+  height: rem-calc(37);
+  width: rem-calc(137);
+  background: #FFFFFF;
+
+border: 1px solid #E2E8F0;
+border-radius: rem-calc(48);
+&.enabled{
+  .button{
+   transform: translate(71px);
+    transition: 0.5s;
+  }
+  .switch-button__first{
+    color: $tex-bec;
+  }
+  .switch-button__second{
+    color: #ffffff;
+  }
+}
+}
+.switch-button {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+font-size: rem-calc(14);
+line-height: 110%;
+padding: rem-calc(0 15);
+font-family: $font-family;
+
+		// .switch-button__first
+
+		&__first {
+      z-index: 5;
+      color: #ffffff;
+      transition: 0.5s;
+		}
+
+		// .switch-button__second
+
+		&__second {
+      z-index: 5;
+      color: $tex-bec;
+      transition: 0.5s;
+		}
+}
+.button {
+  position: absolute;
+  width: rem-calc(55);
+  height: rem-calc(31);
+  border-radius: rem-calc(33);
+  left: rem-calc(4);
+  top: rem-calc(2);
+  background-color: $secondary;
+  z-index: 3;
+  transition: 0.5s;
+  transform: translate(0);
+}
+.switch-button-label {
+}

@@ -1,0 +1,114 @@
+.where-clean {
+  // position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  // transform: scale(0.6) translate(-170px);
+  transform: scale(0.6) translate(-377px);
+
+  // overflow: hidden;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: 1s;
+  .pin{
+    opacity: 0;
+    transition: 2.5s;
+  }
+  &.active{
+    animation:where-clean  3s forwards;
+    animation-delay:1s;
+    .pin{
+      opacity: 1;
+      transition: 2.5s;
+    }
+    .tabs{
+      animation:where-clean-tabs 3s forwards;
+      animation-delay: 1s;
+    }
+  }
+  // .where-clean__inner
+
+  &__inner {
+    & > div {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+  // where-clean__img
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  // .where-clean__back
+  &__back {
+    position: absolute;
+    left: rem-calc(60);
+    top: rem-calc(20);
+    font-weight: 500;
+    font-size: rem-calc(16);
+    font-family: $font-family;
+    line-height: 130%;
+    color: #ffffff;
+    opacity: 0.7;
+    transition: 0.5s;
+    z-index: 5;
+    &:hover{
+        transition: 0.5s;
+        opacity: 1;
+    }
+  }
+}
+
+.tabs-details{
+  width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &>div{
+    width: 100%;
+    position: absolute;
+    clip-path: inset(0 100% 0 0%);
+    transition: 1.7s;
+    &:last-child:not(.active){
+      clip-path: inset(0 0% 0 0%);
+      z-index: -1;
+    }
+  }
+  &>div.active{
+    clip-path: inset(0 0% 0 0%);
+    transition: 1s;
+  }
+}
+@keyframes where-clean  {
+  0%{
+    position: fixed;
+    transform: scale(0.6) translate(-377px);
+  }
+  50%{
+    transform: scale(1) translate(0px);
+  }
+  100%{
+    transform: scale(1) translate(0px);
+    position: fixed;
+  }
+}
+@keyframes where-clean-tabs  {
+  0%{
+    transform: translate(-1000px);
+  }
+  50%{
+    transform: translate(-100px);
+  }
+  100%{
+    transform: translate(0px);
+  }
+}

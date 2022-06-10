@@ -1,0 +1,57 @@
+.tabs {
+  min-width: rem-calc(375);
+  background-color: $secondary;
+ transform: translate(-1000px);
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: rem-calc(60);
+    padding-right: rem-calc(30);
+    box-sizing: border-box;
+  }
+
+  li{
+    &::before {
+      opacity: 0;
+  }
+  }
+  li.is-active {
+    a {
+        position: relative;
+
+        padding-left: rem-calc(60);
+        
+      &::before {
+          content: "→";
+          position: absolute;
+          left: rem-calc(0);
+          top: rem-calc(00);
+          opacity: 1;
+      }
+    }
+  }
+  a {
+    display: flex;
+    font-style: italic;
+    font-weight: 400;
+    font-size: rem-calc(44);
+    line-height: 120%;
+    /* identical to box height, or 53px */
+
+    /* White */
+
+    color: #ffffff;
+
+    opacity: 0.7;
+    padding-bottom: rem-calc(22);
+    transition: 0.4s;
+    &:hover {
+      opacity: 1;
+      transition: 0.4s;
+    }
+  }
+}
+.tabs-detals {
+}
